@@ -1,60 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="header">
-    <img src="images/trybewarts-header-logo.svg" 
-    alt="Logo com bordas e T maiúsculo em branco" 
-    class="trybewarts-header-logo">
-    <h1 id="trybewarts-header-title">Trybewarts</h1>
-    <form class="trybewarts-login">
-    <label for="email">
-      <input type="email" name="email" placeholder="Email" id="emailLogin">
-    </label>
-    <label for="password">
-      <input type="password" name="password" placeholder="Senha" id="senhaLogin">
-    </label>
-      <button type="button" id="botaoEntrar">Entrar</button>
-    </form>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img
+        src="images/trybewarts-header-logo.svg"
+        alt="Logo com bordas e T maiúsculo em branco"
+        class="trybewarts-header-logo"
+      />
+      <h1 id="trybewarts-header-title">Trybewarts</h1>
+      <form class="trybewarts-login">
+        <label for="email">
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            id="emailLogin"
+          />
+        </label>
+        <label for="password">
+          <input
+            type="password"
+            name="password"
+            placeholder="Senha"
+            id="senhaLogin"
+          />
+        </label>
+        <button type="button" id="botaoEntrar">Entrar</button>
+      </form>
+    </header>
 
-  <main>
-    <form action="" method="get" id='evaluation-form'>
+    <main>
+      <form action="" method="get" id="evaluation-form">
+        <div class="nome-completo">
+          <label for="name">
+            <input id="input-name" placeholder="Nome" name="name" />
+          </label>
+          <label for="lastname">
+            <input
+              id="input-lastname"
+              placeholder="Sobrenome"
+              name="lastname"
+            />
+          </label>
+        </div>
+        <div class="email-house">
+          <label for="email-form">
+            <input id="input-email" placeholder="Email" name="email2" />
+          </label>
 
-    <div class="nome-completo">
-      <label for="name">
-        <input id="input-name" placeholder="Nome" name="name">
-      </label>
-      <label for="lastname">
-        <input id="input-lastname" placeholder="Sobrenome" name="lastname">
-      </label>
-    </div>
-    <div class="email-house">
-      <label for="email-form">
-        <input id="input-email" placeholder="Email" name="email2">
-      </label>
-      
-      <label for="house">Casa:</label>
-      <select name="house" id="house">
-        <option value="Gitnória" id="gitnoria-house">Gitnória</option>
-        <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
-        <option value="Corvinode" id="corvinode-house">Corvinode</option>
-        <option value="Pytherina" id="pytherina-house">Pytherina</option>
-      </select>
-    
-    </div>
-    </form>
-    <img src="images/trybewarts-colored.svg" 
-    alt="Logo com tecnologias e um T maiúsculo de cor preta centralizada" 
-    id="trybewarts-forms-logo">
-  </main>
-  
-  <script type="text/javascript" src="script.js"></script>
-</body>
+          <label for="house">Casa:</label>
+          <select name="house" id="house">
+            <option value="Gitnória" id="gitnoria-house">Gitnória</option>
+            <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
+            <option value="Corvinode" id="corvinode-house">Corvinode</option>
+            <option value="Pytherina" id="pytherina-house">Pytherina</option>
+          </select>
+
+          <div class="family-container">
+            <label id="label-family">Qual sua família?</label>
+            <label for="family">
+              <input type="radio" name="family" value="Frontend" />Família
+              Frontend
+            </label>
+            <label for="family">
+              <input type="radio" name="family" value="Backend" />Família
+              Backend
+            </label>
+            <label for="family">
+              <input type="radio" name="family" value="FullStack" />Família
+              FullStack
+            </label>
+          </div>
+        </div>
+      </form>
+      <img
+        src="images/trybewarts-colored.svg"
+        alt="Logo com tecnologias e um T maiúsculo de cor preta centralizada"
+        id="trybewarts-forms-logo"
+      />
+    </main>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
 </html>

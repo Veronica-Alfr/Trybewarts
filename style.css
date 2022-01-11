@@ -25,3 +25,8 @@ main {
 .nome-completo {
   display: flex;
 }
+
+.family-container {
+  display: flex;
+  flex-direction: column;
+}
