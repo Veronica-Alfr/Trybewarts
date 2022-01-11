@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -35,7 +34,7 @@
         <button type="button" id="botaoEntrar">Entrar</button>
       </form>
     </header>
-
+​
     <main>
       <form action="" method="get" id="evaluation-form">
         <div class="nome-completo">
@@ -54,70 +53,66 @@
           <label for="email-form">
             <input id="input-email" placeholder="Email" name="email2" />
           </label>
+​
+          <label for="house">Casa:</label>
+          <select name="house" id="house">
+            <option value="Gitnória" id="gitnoria-house">Gitnória</option>
+            <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
+            <option value="Corvinode" id="corvinode-house">Corvinode</option>
+            <option value="Pytherina" id="pytherina-house">Pytherina</option>
+          </select>
+​        </div>
 
-    <div class="nome-completo">
-      <label for="name">
-        <input id="input-name" placeholder="Nome" name="name">
-      </label>
-      <label for="lastname">
-        <input id="input-lastname" placeholder="Sobrenome" name="lastname">
-      </label>
-    </div>
-    <div class="email-house">
-      <label for="email-form">
-        <input id="input-email" placeholder="Email" name="email2">
-      </label>
-      
-      <label for="house">Casa:</label>
-      <select name="house" id="house">
-        <option value="Gitnória" id="gitnoria-house">Gitnória</option>
-        <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
-        <option value="Corvinode" id="corvinode-house">Corvinode</option>
-        <option value="Pytherina" id="pytherina-house">Pytherina</option>
-      </select>
-    
-    <div class="family-container">  
-     <label id="label-family">Qual sua família?</label>
-     <label for="family">
-     <input type="radio" name="family" value="Frontend">Família Frontend
-     </label>
-    <label for="family">
-     <input type="radio" name="family" value="Backend">Família Backend
-    </label> 
-    <label for="family">
-     <input type="radio" name="family" value="FullStack">Família FullStack
-    </label> 
-    </div>
-    </div>
+          <div class="family-container">
+            <label id="label-family">Qual sua família?</label>
+            <label for="family">
+              <input type="radio" name="family" value="Frontend" />Família
+              Frontend
+            </label>
+            <label for="family">
+              <input type="radio" name="family" value="Backend" />Família
+              Backend
+            </label>
+            <label for="family">
+              <input type="radio" name="family" value="FullStack" />Família
+              FullStack
+            </label>
+          </div>
+        
+          <div>
+            <label id="label-content">"Qual conteúdo você está com mais vontade de aprender?"</label>
+            <label>
+             <input type="checkbox" value="HoFs">HoFs
+            </label>
+            <label>
+              <input type="checkbox" value="Jest">Jest
+            </label>
+            <label>
+              <input type="checkbox" value="Promises">Promises
+            </label>
+            <label>
+              <input type="checkbox" value="React">React
+            </label>
+            <label>
+              <input type="checkbox" value="SQL">SQL
+            </label>
+            <label>
+              <input type="checkbox" value="Python">Python
+            </label>
+            </div>  
 
-    <div>
-    <label id="label-content">"Qual conteúdo você está com mais vontade de aprender?"</label>
-    <label>
-     <input type="checkbox" value="HoFs">HoFs
-    </label>
-    <label>
-      <input type="checkbox" value="Jest">Jest
-    </label>
-    <label>
-      <input type="checkbox" value="Promises">Promises
-    </label>
-    <label>
-      <input type="checkbox" value="React">React
-    </label>
-    <label>
-      <input type="checkbox" value="SQL">SQL
-    </label>
-    <label>
-      <input type="checkbox" value="Python">Python
-    </label>
-    </div>
-
-    </form>
-    <img src="images/trybewarts-colored.svg" 
-    alt="Logo com tecnologias e um T maiúsculo de cor preta centralizada" 
-    id="trybewarts-forms-logo">
-  </main>
-  
-  <script type="text/javascript" src="script.js"></script>
-</body>
+        <div id="avaliationText">
+          <label for="avaliation" class="textarea">Deixe seu comentário:</label>
+          <textarea maxlength="500"></textarea>
+        </div>
+      </form>
+      <img
+        src="images/trybewarts-colored.svg"
+        alt="Logo com tecnologias e um T maiúsculo de cor preta centralizada"
+        id="trybewarts-forms-logo"
+      />
+    </main>
+​
+    <script type="text/javascript" src="script.js"></script>
+  </body>
 </html>
