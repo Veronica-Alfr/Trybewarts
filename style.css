@@ -30,3 +30,8 @@ main {
   display: flex;
   flex-direction: column;
 }
+
+#avaliationText {
+  display: flex;
+  flex-direction: column;
+}
