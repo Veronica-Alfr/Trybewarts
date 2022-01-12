@@ -12,7 +12,7 @@ function verificaLogin() {
 
 botaoLogin.addEventListener('click', verificaLogin);
 
-const divAvaliattion = document.getElementById('avaliation-container');
+const divAvaliation = document.getElementById('avaliation-container');
 
 // Ajuda de Raphael Martins
 function radio() {
@@ -26,7 +26,20 @@ function radio() {
     label.for = radiosAvaliation.id;
     label.innerHTML = i;
     label.appendChild(radiosAvaliation);
-    divAvaliattion.appendChild(label);
+    divAvaliation.appendChild(label);
   }
 }
 radio();
+
+const buttonSubmit = document.getElementById('submit-btn');
+const checkboxSubmit = document.getElementById('agreement');
+
+function submit() {
+  if (!checkboxSubmit.checked) {
+    buttonSubmit.disabled = true;
+  } else {
+    buttonSubmit.disabled = false;
+  }
+}
+
+checkboxSubmit.addEventListener('click', submit);
