@@ -1,4 +1,6 @@
 const botaoLogin = document.getElementById('botaoEntrar');
+const buttonSubmit = document.getElementById('submit-btn');
+const checkboxSubmit = document.getElementById('agreement');
 
 function verificaLogin() {
   const email = document.getElementById('emailLogin');
@@ -31,9 +33,6 @@ function radio() {
 }
 radio();
 
-const buttonSubmit = document.getElementById('submit-btn');
-const checkboxSubmit = document.getElementById('agreement');
-
 function submit() {
   if (!checkboxSubmit.checked) {
     buttonSubmit.disabled = true;
@@ -43,3 +42,48 @@ function submit() {
 }
 
 checkboxSubmit.addEventListener('click', submit);
+
+const textArea = document.getElementById('textarea');
+function countCaractere() {
+  const texto = document.getElementById('counter');
+  const count = 500;
+  texto.innerHTML = count - textArea.value.length;
+}
+textArea.addEventListener('keypress', countCaractere);
+textArea.addEventListener('keyup', countCaractere);
+
+function capturaNomeCompleto() {
+  const nome = document.getElementById('input-name').value;
+  const sobrenome = document.getElementById('input-lastname').value;
+  const elemento = document.createElement('p');
+  elemento.innerText = `Nome: ${nome} ${sobrenome}`;
+  return elemento;
+}
+
+function capturaEmail() {
+  const email = document.getElementById('input-email').value;
+  const elemento = document.createElement('p');
+  elemento.innerText = `Email: ${email}`;
+  return elemento;
+}
+
+function capturaInfos() {
+  return [
+    capturaNomeCompleto(),
+    capturaEmail(),
+  ];
+}
+
+function enviarForm(event) {
+  event.preventDefault();
+  const form = document.getElementById('evaluation-form');
+  const arrElementos = capturaInfos();
+  form.innerHTML = '';
+  for (let index = 0; index < arrElementos.length; index += 1) {
+    form.appendChild(arrElementos[index]);
+  }
+}
+
+buttonSubmit.addEventListener('click', enviarForm);
+
+// querySelectorAll(‘input[name=family]’)

@@ -40,3 +40,16 @@ main {
   display: flex;
   flex-direction: column;
 }
+
+#avaliationText textarea {
+  height: 200px;
+  resize: vertical;
+  padding: 10px;
+}
+
+#avaliationText p {
+  align-self: end;
+  margin-top: -22px;
+  margin-right: 13px;
+  z-index: 1;
+}
