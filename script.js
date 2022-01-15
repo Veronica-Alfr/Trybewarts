@@ -25,6 +25,7 @@ function radio() {
     radiosAvaliation.value = i;
     radiosAvaliation.name = 'rate';
     radiosAvaliation.id = `rate-${i}`;
+    if (i === 1) radiosAvaliation.checked = true;
     label.for = radiosAvaliation.id;
     label.innerHTML = i;
     label.appendChild(radiosAvaliation);
@@ -67,10 +68,70 @@ function capturaEmail() {
   return elemento;
 }
 
+function capturaCasa() {
+  let casa = document.getElementById('house');
+  const indexCasa = casa.selectedIndex;
+  casa = casa.item(indexCasa).innerText;
+  const elemento = document.createElement('p');
+  elemento.innerText = `Casa: ${casa}`;
+  return elemento;
+}
+
+function capturaFamilia() {
+  const familia = document.getElementsByName('family');
+  for (let index = 0; index < familia.length; index += 1) {
+    if (familia[index].checked) {
+      const textoFamilia = familia[index].parentElement.innerText;
+      const textoFinal = textoFamilia.split(' ');
+      const elemento = document.createElement('p');
+      elemento.innerText = `Família: ${textoFinal[1]}`;
+      return elemento;
+    }
+  }
+}
+
+function capturaMaterias() {
+  const materias = document.getElementsByClassName('subject');
+  const elemento = document.createElement('p');
+  const arrayMateriasSelecionadas = [];
+  let textoFinal = 'Matérias:';
+  for (let index = 0; index < materias.length; index += 1) {
+    if (materias[index].checked) {
+      arrayMateriasSelecionadas.push(materias[index].parentElement.innerText);
+    }
+  }
+  textoFinal += arrayMateriasSelecionadas;
+  elemento.innerText = textoFinal;
+  return elemento;
+}
+
+function capturaObservacoes() {
+  const elemento = document.createElement('p');
+  elemento.innerText = `Observações: ${textArea.value}`;
+  return elemento;
+}
+
+function capturaAvaliacao() {
+  const avaliacao = document.getElementsByName('rate');
+  for (let index = 0; index < avaliacao.length; index += 1) {
+    if (avaliacao[index].checked) {
+      const textoAvaliacao = avaliacao[index].parentElement.innerText;
+      const elemento = document.createElement('p');
+      elemento.innerText = `Avaliação: ${textoAvaliacao}`;
+      return elemento;
+    }
+  }
+}
+
 function capturaInfos() {
   return [
     capturaNomeCompleto(),
     capturaEmail(),
+    capturaCasa(),
+    capturaFamilia(),
+    capturaAvaliacao(),
+    capturaMaterias(),
+    capturaObservacoes(),
   ];
 }
 
