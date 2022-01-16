@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@700&display=swap');
+      </style>      
   </head>
   <body>
     <header class="header">
@@ -31,11 +34,14 @@
             id="senhaLogin"
           />
         </label>
+        <label>
         <button type="button" id="botaoEntrar">Entrar</button>
+      </label>
       </form>
     </header>
     <main>
       <form action="" method="get" id="evaluation-form">
+        <h2>Formulário de Avaliação</h2>
         <div class="nome-completo">
           <label for="name">
             <input id="input-name" placeholder="Nome" name="name" />
@@ -75,7 +81,7 @@
               FullStack
             </label>
           </div>
-          <div>
+          <div class="content-container">
             <label id="label-content">"Qual conteúdo você está com mais vontade de aprender?"</label>
             <label>
              <input type="checkbox" value="HoFs" class="subject">
