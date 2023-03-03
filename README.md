@@ -3,7 +3,7 @@
 
   <img src="./Trybewarts.jpeg" alt="Trybewarts Project - Initial Page"/>
   
-   <p>Esse projeto é um formulário com temática da saga Harry Potter no mundo tech!!.</p>
+   <p>Esse projeto é um formulário com temática da saga Harry Potter no mundo tech!!</p>
 
   <h3>Status do Projeto</h3>
   
